@@ -1,0 +1,353 @@
+{
+  "seed": 20261004,
+  "repetitions": 80,
+  "data": "Seeded synthetic integrated-Wiener trajectories; no external or private data.",
+  "design": {
+    "training_length": 400,
+    "test_length": 240,
+    "random_missing_rate": 0.2,
+    "block_outage_indices": [
+      90,
+      130
+    ],
+    "true_q": 0.035,
+    "true_r": 0.64,
+    "prior_mean": [
+      0.0,
+      0.1
+    ],
+    "prior_cov": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.1
+      ]
+    ],
+    "mcse_unit": "independent test trajectory, conditional on the single fitted training trajectory",
+    "model_comparisons_paired": true,
+    "smoother_in_online_comparison": false
+  },
+  "training_fits": {
+    "fitted_clock": {
+      "q": 0.030844462042646164,
+      "r": 0.7087605528422136,
+      "negative_log_likelihood": 576.84558414697,
+      "best_start_negative_log_likelihood": 602.001822611381,
+      "successful_starts": 3,
+      "total_starts": 3,
+      "at_bound": false,
+      "observed_training_points": 330
+    },
+    "fitted_unit_clock": {
+      "q": 3.736090354161074,
+      "r": 15.315498247384278,
+      "negative_log_likelihood": 1105.039921503031,
+      "best_start_negative_log_likelihood": 1347.032164466737,
+      "successful_starts": 3,
+      "total_starts": 3,
+      "at_bound": false,
+      "observed_training_points": 330
+    }
+  },
+  "summary": [
+    {
+      "scenario": "random_missing",
+      "model": "oracle_clock",
+      "metrics": {
+        "level_rmse_all": {
+          "mean": 0.8070615760725218,
+          "mcse": 0.013793608907534779
+        },
+        "level_rmse_missing": {
+          "mean": 1.293029044217947,
+          "mcse": 0.03800140477939236
+        },
+        "coverage95_all": {
+          "mean": 0.9496354166666666,
+          "mcse": 0.0021459392640069317
+        },
+        "coverage95_missing": {
+          "mean": 0.953330121701011,
+          "mcse": 0.00391608783198219
+        },
+        "mean95_width_missing": {
+          "mean": 4.509874638752201,
+          "mcse": 0.05807064231902512
+        },
+        "innovation_mean": {
+          "mean": -0.006941000158676651,
+          "mcse": 0.007015323224668501
+        },
+        "innovation_nis_mean": {
+          "mean": 0.9856432283103894,
+          "mcse": 0.010644935146522358
+        },
+        "innovation_acf1": {
+          "mean": 0.014487849023918326,
+          "mcse": 0.008505107942962236
+        },
+        "predictive_nll_per_observation": {
+          "mean": 1.7108690232853008,
+          "mcse": 0.00631632414970903
+        }
+      }
+    },
+    {
+      "scenario": "random_missing",
+      "model": "fitted_clock",
+      "metrics": {
+        "level_rmse_all": {
+          "mean": 0.8078920866117085,
+          "mcse": 0.013798368159534224
+        },
+        "level_rmse_missing": {
+          "mean": 1.293809792193188,
+          "mcse": 0.03792261160191953
+        },
+        "coverage95_all": {
+          "mean": 0.9561458333333335,
+          "mcse": 0.0020607624910831948
+        },
+        "coverage95_missing": {
+          "mean": 0.9546222782699404,
+          "mcse": 0.0039545756784794585
+        },
+        "mean95_width_missing": {
+          "mean": 4.502200090835227,
+          "mcse": 0.05506974585027919
+        },
+        "innovation_mean": {
+          "mean": -0.007301462173438122,
+          "mcse": 0.007382012400776948
+        },
+        "innovation_nis_mean": {
+          "mean": 0.9443154978601417,
+          "mcse": 0.010247931290754539
+        },
+        "innovation_acf1": {
+          "mean": 0.05146517697803271,
+          "mcse": 0.008587265161858298
+        },
+        "predictive_nll_per_observation": {
+          "mean": 1.7136668757745142,
+          "mcse": 0.006116645841667202
+        }
+      }
+    },
+    {
+      "scenario": "random_missing",
+      "model": "fitted_unit_clock",
+      "metrics": {
+        "level_rmse_all": {
+          "mean": 2.285702569509995,
+          "mcse": 0.1381765976614289
+        },
+        "level_rmse_missing": {
+          "mean": 4.133084533134584,
+          "mcse": 0.27547618016043385
+        },
+        "coverage95_all": {
+          "mean": 0.9823437500000001,
+          "mcse": 0.002985405109643994
+        },
+        "coverage95_missing": {
+          "mean": 0.9602670140123575,
+          "mcse": 0.0059175709827038155
+        },
+        "mean95_width_missing": {
+          "mean": 22.772479363081658,
+          "mcse": 0.15312236618728267
+        },
+        "innovation_mean": {
+          "mean": 0.00045997985170918843,
+          "mcse": 0.0015943718003655076
+        },
+        "innovation_nis_mean": {
+          "mean": 0.49403673372526874,
+          "mcse": 0.0701646367160081
+        },
+        "innovation_acf1": {
+          "mean": 0.09986910323301554,
+          "mcse": 0.00977835052342066
+        },
+        "predictive_nll_per_observation": {
+          "mean": 3.106647800533282,
+          "mcse": 0.035012158539793135
+        }
+      }
+    },
+    {
+      "scenario": "block_outage",
+      "model": "oracle_clock",
+      "metrics": {
+        "level_rmse_all": {
+          "mean": 10.126300475081152,
+          "mcse": 0.8679802362286668
+        },
+        "level_rmse_missing": {
+          "mean": 17.439485849155215,
+          "mcse": 1.5015054690825165
+        },
+        "coverage95_all": {
+          "mean": 0.9468229166666667,
+          "mcse": 0.004413971337180791
+        },
+        "coverage95_missing": {
+          "mean": 0.9417419735209457,
+          "mcse": 0.0118488803214639
+        },
+        "mean95_width_missing": {
+          "mean": 48.28010962064297,
+          "mcse": 1.2563825039217202
+        },
+        "innovation_mean": {
+          "mean": -0.009532788045989348,
+          "mcse": 0.008067082630739394
+        },
+        "innovation_nis_mean": {
+          "mean": 0.981870839115252,
+          "mcse": 0.01175968413065769
+        },
+        "innovation_acf1": {
+          "mean": 0.011097531868426097,
+          "mcse": 0.009477168470709726
+        },
+        "predictive_nll_per_observation": {
+          "mean": 1.7370454744776485,
+          "mcse": 0.007055314531989304
+        }
+      }
+    },
+    {
+      "scenario": "block_outage",
+      "model": "fitted_clock",
+      "metrics": {
+        "level_rmse_all": {
+          "mean": 10.15129261759707,
+          "mcse": 0.8750016798667073
+        },
+        "level_rmse_missing": {
+          "mean": 17.48194690693934,
+          "mcse": 1.5138617257868803
+        },
+        "coverage95_all": {
+          "mean": 0.94890625,
+          "mcse": 0.004912060564791166
+        },
+        "coverage95_missing": {
+          "mean": 0.9336211781963304,
+          "mcse": 0.01363150769284296
+        },
+        "mean95_width_missing": {
+          "mean": 45.7487738572929,
+          "mcse": 1.1817861221397465
+        },
+        "innovation_mean": {
+          "mean": -0.010006214994390018,
+          "mcse": 0.008500378205599252
+        },
+        "innovation_nis_mean": {
+          "mean": 0.9420750650350402,
+          "mcse": 0.01126215288403501
+        },
+        "innovation_acf1": {
+          "mean": 0.047715550362736135,
+          "mcse": 0.00959396284858811
+        },
+        "predictive_nll_per_observation": {
+          "mean": 1.7399662860744634,
+          "mcse": 0.006806257694713252
+        }
+      }
+    },
+    {
+      "scenario": "block_outage",
+      "model": "fitted_unit_clock",
+      "metrics": {
+        "level_rmse_all": {
+          "mean": 15.061429689711735,
+          "mcse": 1.519005535324781
+        },
+        "level_rmse_missing": {
+          "mean": 25.93417844804302,
+          "mcse": 2.618521979369049
+        },
+        "coverage95_all": {
+          "mean": 0.9848958333333335,
+          "mcse": 0.0027846231362430606
+        },
+        "coverage95_missing": {
+          "mean": 0.9794240801276916,
+          "mcse": 0.0034127716564109254
+        },
+        "mean95_width_missing": {
+          "mean": 271.64975739781664,
+          "mcse": 2.094570800407822
+        },
+        "innovation_mean": {
+          "mean": 0.0004230442509375069,
+          "mcse": 0.0020529365263151577
+        },
+        "innovation_nis_mean": {
+          "mean": 0.4877596476838525,
+          "mcse": 0.07367208804709499
+        },
+        "innovation_acf1": {
+          "mean": 0.09321084497571872,
+          "mcse": 0.009504875689324547
+        },
+        "predictive_nll_per_observation": {
+          "mean": 3.1302358341442065,
+          "mcse": 0.03677212152161795
+        }
+      }
+    }
+  ],
+  "paired_differences": [
+    {
+      "scenario": "random_missing",
+      "contrast": "fitted_clock minus fitted_unit_clock",
+      "metrics": {
+        "level_rmse_missing": {
+          "mean": -2.839274740941396,
+          "mcse": 0.26265907888131235
+        },
+        "coverage95_missing": {
+          "mean": -0.005644735742416927,
+          "mcse": 0.006496639179539373
+        },
+        "predictive_nll_per_observation": {
+          "mean": -1.3929809247587674,
+          "mcse": 0.034100889168295234
+        }
+      }
+    },
+    {
+      "scenario": "block_outage",
+      "contrast": "fitted_clock minus fitted_unit_clock",
+      "metrics": {
+        "level_rmse_missing": {
+          "mean": -8.45223154110368,
+          "mcse": 2.4483061627010625
+        },
+        "coverage95_missing": {
+          "mean": -0.04580290193136114,
+          "mcse": 0.014153522038754803
+        },
+        "predictive_nll_per_observation": {
+          "mean": -1.3902695480697436,
+          "mcse": 0.03609801663101986
+        }
+      }
+    }
+  ],
+  "causality_demo": {
+    "future_edit_starts_at_index": 150,
+    "future_observation_shift": 10,
+    "filter_prefix_max_change": 0.0,
+    "smoother_prefix_max_change": 3.425534645345863
+  }
+}
